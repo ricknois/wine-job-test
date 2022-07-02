@@ -10,6 +10,8 @@ export const theme = {
     branding: '#C81A78',
     branding2: '#B6116E',
     background: '#DEDEDE',
+    orange: '#F79552',
+    success: '#7EBC43',
   },
   fonts: {
     Neo: 'Neo Sans',
