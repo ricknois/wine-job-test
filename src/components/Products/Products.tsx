@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Item } from '../../services/api/interfaces';
 import { formatPrice } from '../../services/formatter/formatter';
 import Button from '../Button/Button';
@@ -24,10 +26,46 @@ export default function Product({
   discount,
   priceMember,
   priceNonMember,
+  id,
+  sommelierComment,
+  flag,
+  rating,
+  classification,
+  country,
+  region,
+  type,
+  Rating,
+  avaliations,
+  size,
+  volume,
 }: Item) {
+  const navigation = useNavigate();
+  const state = {
+    name,
+    image,
+    price,
+    discount,
+    priceMember,
+    priceNonMember,
+    id,
+    sommelierComment,
+    flag,
+    rating,
+    classification,
+    country,
+    region,
+    type,
+    Rating,
+    avaliations,
+    size,
+    volume,
+  };
+
   return (
     <Container>
-      <ContentContainer>
+      <ContentContainer
+        onClick={() => navigation(`/products/${id}`, { state: { ...state } })}
+      >
         <Logo src={image} />
         <Title>{name}</Title>
         <DiscountContainer>

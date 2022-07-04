@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import { Header } from '../../components';
-import Product from '../../components/Producst/Product';
+import Product from '../../components/Products/Products';
 import { Data, Item } from '../../services/api/interfaces';
 import {
   Container,

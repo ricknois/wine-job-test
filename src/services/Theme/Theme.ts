@@ -6,6 +6,7 @@ export const theme = {
     gray1: '#888888',
     gray2: '#555555',
     gray3: '#666666',
+    grayDark: '#3333333',
     gray4: '#111111',
     branding: '#C81A78',
     branding2: '#B6116E',
