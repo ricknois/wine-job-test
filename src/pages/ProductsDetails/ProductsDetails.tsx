@@ -40,7 +40,9 @@ export interface LocationParams {
 export default function ProductsDetails() {
   const { state } = useLocation() as LocationParams;
 
-  return (
+  return !state ? (
+    <div>Not Found</div>
+  ) : (
     <>
       <Header />
       <Container>
