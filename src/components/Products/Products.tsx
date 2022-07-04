@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { Item } from '../../services/api/interfaces';
 import { formatPrice } from '../../services/formatter/formatter';
+import { addItemToLocalStorage } from '../../services/localStorage/localStorage';
 import Button from '../Button/Button';
 import {
   ButtonContainer,
@@ -82,7 +83,7 @@ export default function Product({
         <PriceNonMember>{`Não sócio R$ ${formatPrice(priceNonMember)}`}</PriceNonMember>
       </ContentContainer>
       <ButtonContainer>
-        <Button />
+        <Button onPress={addItemToLocalStorage(name, price, id)} />
       </ButtonContainer>
     </Container>
   );

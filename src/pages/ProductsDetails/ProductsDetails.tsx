@@ -5,6 +5,7 @@ import { Header } from '../../components';
 import Button from '../../components/Button/Button';
 import { Item } from '../../services/api/interfaces';
 import { formatPrice } from '../../services/formatter/formatter';
+import { addItemToLocalStorage } from '../../services/localStorage/localStorage';
 import {
   ButtonContainer,
   Container,
@@ -74,7 +75,7 @@ export default function ProductsDetails() {
             <Description>{state.sommelierComment}</Description>
           </DescriptionContainer>
           <ButtonContainer>
-            <Button />
+            <Button onPress={addItemToLocalStorage(state.name, state.price, state.id)} />
           </ButtonContainer>
         </ContentContainer>
         <MobilePriceContainer>
@@ -87,7 +88,7 @@ export default function ProductsDetails() {
             )}`}</PriceNonMember>
           </PriceInfoWrapper>
           <ButtonContainer>
-            <Button />
+            <Button onPress={addItemToLocalStorage(state.name, state.price, state.id)} />
           </ButtonContainer>
         </MobilePriceContainer>
       </Container>
